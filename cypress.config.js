@@ -1,7 +1,8 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
-  allowCypressEnv: false,
+export default defineConfig({
+  waitForAnimations: false,
+  animationDistanceThreshold: 50,
 
   e2e: {
     setupNodeEvents(on, config) {
